@@ -1,2 +1,2 @@
 print ('Hello, World!')
-print ('This is a sample Python sc')
+print ('This is a sample Python sriostc')
