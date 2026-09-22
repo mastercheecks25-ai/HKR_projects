@@ -12,10 +12,9 @@ while True:
         for i in shopping_list:
             print(f'{i}')
     elif choice == 3:
-        print("-" * 20)
-        print(f"{title:^20}")
-        print("-" * 20)
-
+        dashes = len(title)
+        # ----------If the padding has to be exact-------- #
+        print(f"\n{'-' * dashes:-^{dashes + 6}}\n{title:^{dashes + 6}}\n{'-' * dashes:-^{dashes + 6}}")#
         for i in shopping_list:
             print(f'{i}')
         print("")
