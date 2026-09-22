@@ -13,11 +13,12 @@ while True:
             print(f'{i}')
     elif choice == 3:
         dashes = len(title)
-        print(f"{'-' * dashes:-^{dashes + 6}}\n{title:^{dashes + 6}}\n{'-' * dashes:-^{dashes + 6}}\n")
+        print(f"\n{'-' * dashes:-^{dashes + 6}}\n{title:^{dashes + 6}}\n{'-' * dashes:-^{dashes + 6}}")
         for i in shopping_list:
             print(f'{i}')
+        print("")
         break
     else:
-        print("Error: invalid choice, please try again.")
+        print("Error: Invalid choice, please try again.")
 
         
