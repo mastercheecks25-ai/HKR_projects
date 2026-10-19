@@ -39,6 +39,27 @@ def read_data(filename):
     except:
         print("*** ERROR: The specified file could not be read. ***")
 
+def load_range(filename, start, stop):
+    try:
+        file = open(filename, "r")
+        test_subjects = []
+        num_test_subjects = 0
+        while True:
+            if number > start and number < stop:
+                number = file.readline().strip()
+                if number == "":
+                    break
+                num_test_subjects += 1
+                time = file.readline().strip()
+                one_subject = (number, int(time))
+                test_subjects.append(one_subject)
+            print("*** Data read from file ***")
+            print(f"*** {num_test_subjects} test subjects found ***")
+            return(test_subjects)
+    except:
+        print("*** ERROR: The specified file could not be read. ***")
+
+
 
 def print_test_subjects(test_subjects):
     print("---- Registered test subjects ----")
@@ -66,6 +87,11 @@ def main():
             filename = input("Filename: ")
             write_data(filename)
             print("\n *** Data written to file ***\n")
+        elif choice == "l":
+            filename = input("Filename: ")
+            start = input("start")
+            stop = input("stop")
+            test_subjects = load_range(filename, start, stop)
         elif choice == 'q':
             break
         
