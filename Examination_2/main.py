@@ -55,7 +55,7 @@ def main():
             test_subjects = read_data(filename)
         elif choice == "w":
             filename = input("Filename: ")
-            write_data(filename)
+            write_data(test_subjects, filename)
             print("\n *** Data written to file ***\n")
         elif choice == 'q':
             break
