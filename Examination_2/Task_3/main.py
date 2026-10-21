@@ -104,14 +104,9 @@ def main():
             filename2 = input('Filename2: ')
             test_subjects = read_data(filename1)
             file2test_subjects = read_data(filename2)
-
-            for i in test_subjects:
-                for j in file2test_subjects:
-                    if i == j:
-                        break
-                    else:
-                        test_subjects.append(j)
-
+            for j in file2test_subjects:
+                if not any(i[0] == j[0] for i in test_subjects):
+                    test_subjects.append(j)
 
 if __name__ == '__main__':
     main()
