@@ -7,6 +7,7 @@ def print_menu():
     print("q) Quit")
     print("F) Add new test subject directly to file")
     print("X) Remove directly from file")
+    print("M) ")
     print("-------------------------")
 
 
@@ -66,7 +67,9 @@ def remove_from_file(filename, num):
     for i in test_subjects:
             file.write(f"{i[0]}\n{i[1]}\n")
     file.close()
+
     
+
 
 
 def main():
@@ -96,7 +99,18 @@ def main():
             filename = input("Filename: ")
             num = input("number: ")
             remove_from_file(filename, num)
+        elif choice == "M":
+            filename1 = input('Filename1: ')
+            filename2 = input('Filename2: ')
+            test_subjects = read_data(filename1)
+            file2test_subjects = read_data(filename2)
 
+            for i in test_subjects:
+                for j in file2test_subjects:
+                    if i == j:
+                        break
+                    else:
+                        test_subjects.append(j)
 
 
 if __name__ == '__main__':
