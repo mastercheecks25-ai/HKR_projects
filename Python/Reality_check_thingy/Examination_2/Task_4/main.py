@@ -75,7 +75,7 @@ def main():
                             smth = True
                     if not smth:
                         print("INFO: No test subject with that number was found.")
-                        bre
+                        break
                     slower = 100000000000
                     faster = 0
                     slower_num = ''
